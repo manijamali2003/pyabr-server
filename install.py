@@ -1,19 +1,22 @@
-import shutil, sys, os
+import shutil, sys, os, control, git
 
-packname = sys.argv[1]
-hostname = sys.argv[2]
+hostname = sys.argv[1]
+packname = 'pyabr'
 
-if not os.path.isfile ("pack/"+packname):
-	print ("Cannot install package; "+package+" package not found.")
-	exit()
-	
+## Get the latest version of Pyabr ##
+cs = control.read_record('cs','etc/repo')
+
 if not os.path.isdir ("desk/"+hostname):
 	print ("Cannot install package; "+hostname+" host not found.")
 	exit()
-	
-if not os.path.isdir ("desk/"+hostname+"/pack"): os.mkdir ("desk/"+hostname+"/pack")
 
-shutil.unpack_archive ("pack/"+packname,"desk/"+hostname+"/pack","zip")
+## Git ##
+git.Git('pack/').clone(cs) # Git source code package # Helped from stockoverflow
+
+if not os.path.isdir ("desk/"+hostname+"/pack"): os.mkdir ("desk/"+hostname+"/pack")
+shutil.make_archive ('pack/'+packname,"zip",'pack/'+packname)
+os.remove('pack/'+packname)
+shutil.unpack_archive ("pack/"+packname+".zip","desk/"+hostname+"/pack","zip")
 file = open ("desk/"+hostname+"/pack/config/password.txt","w")
 file.write ("toor")
 file.close()
