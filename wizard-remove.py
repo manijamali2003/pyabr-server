@@ -21,4 +21,3 @@ if os.path.isdir ("desk/"+hostname+"/stor"):
 	
 os.system ("python remove-disk.py "+hostname)
 os.system ("python remove-host.py "+hostname)
-os.remove ("etc/hosts/"+hostname)
