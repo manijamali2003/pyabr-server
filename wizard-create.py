@@ -48,7 +48,7 @@ if disk_size.endswith ("T"):
 os.system ("python create-disk.py "+hostname+" "+disk_size)
 os.system ("python format-disk.py "+hostname)
 os.system ("python active-host.py "+hostname)
-os.system ("python install.py pycloud "+hostname)
+os.system ("python install.py "+hostname)
 
 while True:
 	root_password = getpass.getpass ("Enter your new root password: ")
