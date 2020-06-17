@@ -19,9 +19,29 @@ git clone https://github.com/manijamali2003/pyabr-server
  ```shell script
 cd pyabr-server
 ```
+ - Config thr cloud service:
+ 
+```shell script
+python configure.py
+```
 
  - Create virtual host cloud service:
  
 ```shell script
 sudo python wizard-create.py
+```
+
+# How to launch the cloud service on client?
+
+ - Use SSH or PuTTY
+ - Run Pyabr service as command line interface:
+ 
+ ```shell script
+ssh [hostname]@[server-ip]
+```
+
+ - Run Pyabr service as graphical user interface:
+ 
+```shell script
+ssh -X [hostname]@[server-ip]
 ```
