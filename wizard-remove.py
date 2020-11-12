@@ -17,7 +17,7 @@ if not os.path.isfile ("disk/"+hostname):
 	exit()
 	
 if os.path.isdir ("desk/"+hostname+"/stor"):
-	os.system ("python suspend-host.py "+hostname)
+	os.system ("python3 suspend-host.py "+hostname)
 	
-os.system ("python remove-disk.py "+hostname)
-os.system ("python remove-host.py "+hostname)
+os.system ("python3 remove-disk.py "+hostname)
+os.system ("python3 remove-host.py "+hostname)

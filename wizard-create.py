@@ -12,7 +12,7 @@ if os.path.isdir ("/home/"+hostname):
 	print ("Cannot create host; because "+hostname+" host has already exists.")
 	exit(0)
 	
-os.system ("python create-host.py "+hostname)
+os.system ("python3 create-host.py "+hostname)
 
 
 disk_size = input ("Enter "+hostname+" host size {M,G,T}: ")
@@ -45,7 +45,7 @@ if disk_size.endswith ("T"):
 		print ("Cannot create disk with "+disk_size+" size")
 		exit()
 		
-os.system ("python create-disk.py "+hostname+" "+disk_size)
-os.system ("python format-disk.py "+hostname)
-os.system ("python active-host.py "+hostname)
-os.system ("python install.py "+hostname)
+os.system ("python3 create-disk.py "+hostname+" "+disk_size)
+os.system ("python3 format-disk.py "+hostname)
+os.system ("python3 active-host.py "+hostname)
+os.system ("python3 install.py "+hostname)

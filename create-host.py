@@ -16,7 +16,7 @@ activate = '''
 
 import os, sys
 def run():
-	os.system ("cd stor && python vmnam.pyc")
+	os.system ("cd stor && python3 vmnam.pyc")
 '''
 
 check_activation = '''
@@ -33,7 +33,7 @@ else:
 '''
 
 bashrc = '''
-python check-activation.py
+python3 check-activation.py
 exit
 '''
 
