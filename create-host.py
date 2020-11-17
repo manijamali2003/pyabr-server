@@ -16,7 +16,7 @@ activate = '''
 
 import os, sys
 def run():
-	os.system ("cd stor && python3 vmnam.pyc")
+	os.system ("cd stor && python3 vmabr.pyc")
 '''
 
 check_activation = '''
