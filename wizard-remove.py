@@ -3,7 +3,7 @@ import shutil, os, sys, control
 name = control.read_record ("name","etc/distro")
 version = control.read_record ("version","etc/distro")
 
-print ("Welcome to PyServer")
+print ("Welcome to Remove Pyabr Service")
 print (name+" "+version+" (c) 2020 Mani Jamali.")
 
 hostname = input ("Enter your hostname: ")
